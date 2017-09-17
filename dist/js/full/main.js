@@ -23,7 +23,7 @@ ctx = canvas.getContext('2d');
 
 points = [];
 
-for (i = 0; i < 10; i++) {
+for (i = 0; i < 100; i++) {
   points.push(new Point(10, 20));
 }
 

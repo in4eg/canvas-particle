@@ -21,7 +21,7 @@ ctx = canvas.getContext('2d')
 points = []
 
 
-for [0...10]
+for [0...100]
   points.push new Point 10, 20
 
 
