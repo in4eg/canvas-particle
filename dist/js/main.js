@@ -1,4 +1,4 @@
-var addPoint, canvas, ctx, height, points, setCanvasSize, width;
+var canvas, ctx, height, i, points, setCanvasSize, width;
 
 (function() {
   var requestAnimationFrame;
@@ -23,14 +23,9 @@ ctx = canvas.getContext('2d');
 
 points = [];
 
-addPoint = function() {
-  points.push(new Point(math.random(0, window.innerWidth), math.random(0, window.innerHeight), math.random(0, 3)));
-  if (points.length <= math.random(window.innerWidth, window.innerWidth)) {
-    requestAnimationFrame(addPoint);
-  }
-};
-
-addPoint();
+for (i = 0; i < 100; i++) {
+  points.push(new Point(10, 20));
+}
 
 window.addEventListener('resize', function() {
   setCanvasSize();

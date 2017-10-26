@@ -4,7 +4,6 @@
   margin: 0; }
 
 * {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: 0 !important; }
 
@@ -22,4 +21,5 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-  background: #2C2D3A; }
+  background: #2C2D3A;
+  cursor: none; }

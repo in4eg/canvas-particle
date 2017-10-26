@@ -3,7 +3,7 @@ do ->
   window.requestAnimationFrame = requestAnimationFrame
   return
 
-canvas = document.getElementById('canvas')
+canvas = document.getElementById 'canvas'
 
 width = 0
 height = 0
@@ -16,15 +16,19 @@ do setCanvasSize = ->
   canvas.height = height
   return
 
-ctx = canvas.getContext('2d')
+ctx = canvas.getContext '2d'
 
 points = []
 
+addPoint = ->
+  points.push new Point math.random(0, window.innerWidth), math.random(0, window.innerHeight), math.random(0, 3)
 
-for [0...100]
-  points.push new Point 10, 20
+  if points.length <= math.random(window.innerWidth, window.innerWidth)
+    requestAnimationFrame addPoint
+  
+  return
 
-
+addPoint()
 
 
 window.addEventListener 'resize', ->
